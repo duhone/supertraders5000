@@ -1,0 +1,29 @@
+
+vs.1.0
+
+; Transform to clip space
+dp4 oPos.x, v0, c0
+dp4 oPos.y, v0, c1
+dp4 oPos.z, v0, c2
+dp4 oPos.w, v0, c3   
+
+;set texture coords for selected frame
+add r0.xy,v1.xy,c4.xy
+rsq r1.xy,c4.zz
+mul 0T0.xy,r0.xy,r1.xy
+mov 0T0.zw,c6.zw
+
+;set output color
+mul 0C0.xyzw,v2.xyzw,c5.xyzw
+
+
+;calculate light
+add r0,c7,vo
+dp3 r0,r0,v3
+
+;modulate output color with light
+mul 0D0.xyz,oDo.xyz,r0.xyz
+;set specular to 0
+mov oD1,c6
+
+        

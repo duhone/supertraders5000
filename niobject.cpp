@@ -1,0 +1,31 @@
+// niobject.cpp: implementation of the niobject class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "niobject.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+float niobject::diftime = 0;
+
+niobject::niobject()
+{
+
+}
+
+niobject::~niobject()
+{
+
+}
+
+
+void niobject::settime(float t)
+{
+	diftime = t;
+}
+
+void niobject::setcolor(float r, float g, float b, float a)
+{
+
+}
